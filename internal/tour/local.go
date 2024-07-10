@@ -130,7 +130,7 @@ func Main() {
 	turUIContent, turIndex := addLanguage("tour/tur/")
 	defer turIndex.Close()
 
-	vieUIContent, vieIndex := addLanguage("tour/tur/")
+	vieUIContent, vieIndex := addLanguage("tour/vie/")
 	defer vieIndex.Close()
 
 	// -------------------------------------------------------------------------
