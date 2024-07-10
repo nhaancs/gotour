@@ -5,13 +5,13 @@
             <p>Patch 38</p>
         </div>
         <div style="text-align: center">
-            <img style="width: 100%; max-width: 3000px" src="/tour/eng/static/img/ardan-labs-go-tour-banner.png" alt="Take the Ultimate Go Tour!" />
+            <img style="width: 100%; max-width: 3000px" src="/tour/vie/static/img/ardan-labs-go-tour-banner.png" alt="Take the Ultimate Go Tour!" />
         </div>
         <div class="module" ng-repeat="m in toc.modules">
             <p id="{{m.id}}" class="module-title">{{m.title}}</p>
             <div ng-bind-html-unsafe="m.description"></div>
             <div class="lesson" ng-repeat="l in m.lessons">
-                <a href="/tour/eng/{{l}}" class="lesson-title">{{m.lesson[l].Title}}</a>
+                <a href="/tour/vie/{{l}}" class="lesson-title">{{m.lesson[l].Title}}</a>
                 <p>{{m.lesson[l].Description}}</p>
             </div>
         </div>

@@ -53,7 +53,7 @@ factory('run', ['$window', 'editor',
             // a default go.mod file when it is not already included in
             // the txtar archive.
             //
-            // The exercises use github.com/ardanlabs/gotour/external/tour/eng/{pic,reader,tree,wc}
+            // The exercises use github.com/ardanlabs/gotour/external/tour/vie/{pic,reader,tree,wc}
             // packages, so include the github.com/ardanlabs/gotour/external/toureng module in the
             // build list.
             const hasGoMod = code.indexOf('\n-- go.mod --\n') !== -1 || code.startsWith('-- go.mod --\n');
@@ -194,7 +194,7 @@ factory('toc', ['$http', '$q', '$log', 'tableOfContents', 'storage',
             return mod.lessons[0];
         };
 
-        $http.get('/tour/eng/lesson/').then(
+        $http.get('/tour/vie/lesson/').then(
             function(data) {
                 lessons = data.data;
                 for (var m = 0; m < modules.length; m++) {

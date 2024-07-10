@@ -10,23 +10,23 @@ config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
         $routeProvider.
         when('/tour/', {
-            redirectTo: '/tour/eng/list'
+            redirectTo: '/tour/vie/list'
         }).
-        when('/tour/eng/', {
-            redirectTo: '/tour/eng/list'
+        when('/tour/vie/', {
+            redirectTo: '/tour/vie/list'
         }).
-        when('/tour/eng/list', {
-            templateUrl: '/tour/eng/static/partials/list.html',
+        when('/tour/vie/list', {
+            templateUrl: '/tour/vie/static/partials/list.html',
         }).
-        when('/tour/eng/:lessonId/:pageNumber', {
-            templateUrl: '/tour/eng/static/partials/editor.html',
+        when('/tour/vie/:lessonId/:pageNumber', {
+            templateUrl: '/tour/vie/static/partials/editor.html',
             controller: 'EditorCtrl'
         }).
-        when('/tour/eng/:lessonId', {
-            redirectTo: '/tour/eng/:lessonId/1'
+        when('/tour/vie/:lessonId', {
+            redirectTo: '/tour/vie/:lessonId/1'
         }).
         otherwise({
-            redirectTo: '/tour/eng/list'
+            redirectTo: '/tour/vie/list'
         });
 
         $locationProvider.html5Mode(true).hashPrefix('!');
@@ -41,18 +41,18 @@ run(function($rootScope, $location, mapping) {
         if (url.pathname != '/tour/' || url.hash == '') {
             return;
         }
-        if (url.pathname != '/tour/eng/' || url.hash == '') {
+        if (url.pathname != '/tour/vie/' || url.hash == '') {
             return;
         }
         $location.hash('');
         var m = mapping[url.hash];
         if (m === undefined) {
             console.log('unknown url, redirecting home');
-            $location.path('/tour/eng/list');
+            $location.path('/tour/vie/list');
             return;
         } 
       
-        $location.path('/tour/eng' + m);
+        $location.path('/tour/vie' + m);
     });
 });
 
